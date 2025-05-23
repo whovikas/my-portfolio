@@ -12,7 +12,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind Config: Add Custom Colors -->
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       theme: {
@@ -21,80 +21,65 @@
             classy: ['Merriweather', 'serif'],
           },
           colors: {
-            elegant: {
-              bg: '#f8f5f2',
-              card: '#ffffffcc',
-              primary: '#3b4c64',
-              accent: '#9a8c98',
-              detail: '#6b705c',
-              soft: '#d6ccc2',
-              link: '#6c584c',
+            soft: {
+              bg: '#faf9f6',
+              text: '#2e2e2e',
+              accent: '#3b4c64',
+              muted: '#9ca3af',
             },
           },
-        },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            fadeUp: 'fadeUp 0.8s ease-out forwards',
+          },
+        }
       }
-    }
+    };
   </script>
 
-  <!-- Custom Styles -->
   <style>
     body {
       font-family: 'Merriweather', serif;
     }
-    .fade-in {
-      animation: fadeIn 1s ease-out forwards;
-      opacity: 0;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-    .btn-animate:active {
-      transform: scale(0.97);
-      transition: transform 0.1s ease-in-out;
-    }
-    .card-glass {
-      backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.8);
-      border: 1px solid #ddd;
-    }
   </style>
 </head>
-<body class="bg-elegant-bg text-elegant-detail p-6 md:p-10">
+<body class="bg-soft-bg text-soft-text px-6 py-12">
 
-  <!-- Container -->
-  <div class="max-w-3xl mx-auto fade-in shadow-2xl rounded-2xl p-10 card-glass">
-
-    <!-- Profile Image -->
+  <!-- Profile Image -->
+  <div class="flex justify-center mb-6 opacity-0 animate-fadeUp">
     <img src="img1.jpg" alt="Vikas Kanojiya"
-         class="w-36 h-36 mx-auto rounded-full border-[6px] border-elegant-primary shadow-lg hover:scale-105 transition-transform duration-500" />
-
-    <!-- Name -->
-    <h1 class="text-5xl font-semibold mt-6 text-elegant-primary tracking-wide font-classy">Vikas Virendra Kanojiya</h1>
-
-    <!-- Contact Info -->
-    <p class="text-lg text-elegant-link mt-3 italic">📧 123vikas7034@sjcem.edu.in</p>
-    <p class="text-lg text-elegant-link italic">📞 +91 73874 92201</p>
-
-    <!-- Introduction -->
-    <p class="text-lg mt-6 text-elegant-detail leading-relaxed">
-      Passionate developer and learner, building cool projects with HTML, CSS, JS and modern frameworks.
-    </p>
-
-    <!-- Button Section -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
-      <a href="my-portfolio/day1/" class="btn btn-outline border-elegant-primary text-elegant-primary btn-animate w-full">🌟 Day 1</a>
-      <a href="my-portfolio/day2/" class="btn btn-outline border-elegant-accent text-elegant-accent btn-animate w-full">🚀 Day 2</a>
-      <a href="my-portfolio/day3/" class="btn btn-outline border-elegant-detail text-elegant-detail btn-animate w-full">🎯 Day 3</a>
-      <a href="my-portfolio/day4/" class="btn btn-outline border-elegant-soft text-elegant-soft btn-animate w-full">📘 Day 4</a>
-    </div>
-
-    <!-- Footer -->
-    <footer class="mt-12 text-center text-sm text-elegant-link italic">
-      &copy; 2025 Vikas Kanojiya • Built with 💻 TailwindCSS & DaisyUI
-    </footer>
+         class="w-32 h-32 rounded-full border-2 border-gray-300 shadow-md hover:scale-105 transition-transform duration-500" />
   </div>
+
+  <!-- Name & Contact -->
+  <div class="text-center opacity-0 animate-fadeUp delay-100">
+    <h1 class="text-4xl font-bold text-soft-accent mb-2">Vikas Virendra Kanojiya</h1>
+    <p class="text-base text-soft-muted">📧 123vikas7034@sjcem.edu.in</p>
+    <p class="text-base text-soft-muted mb-4">📞 +91 73874 92201</p>
+  </div>
+
+  <!-- Introduction -->
+  <p class="text-center text-lg max-w-xl mx-auto leading-relaxed mt-6 opacity-0 animate-fadeUp delay-200">
+    Passionate developer and learner, building cool projects with HTML, CSS, JS and modern frameworks.
+  </p>
+
+  <!-- Buttons -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto mt-10 opacity-0 animate-fadeUp delay-[300ms]">
+    <a href="my-portfolio/day1/" class="btn btn-outline border-gray-300 text-soft-accent hover:bg-gray-100 transition">🌟 Day 1</a>
+    <a href="my-portfolio/day2/" class="btn btn-outline border-gray-300 text-soft-accent hover:bg-gray-100 transition">🚀 Day 2</a>
+    <a href="my-portfolio/day3/" class="btn btn-outline border-gray-300 text-soft-accent hover:bg-gray-100 transition">🎯 Day 3</a>
+    <a href="my-portfolio/day4/" class="btn btn-outline border-gray-300 text-soft-accent hover:bg-gray-100 transition">📘 Day 4</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-soft-muted mt-16 opacity-0 animate-fadeUp delay-[400ms]">
+    &copy; 2025 Vikas Kanojiya • Built with 💻 TailwindCSS & DaisyUI
+  </footer>
 
 </body>
 </html>
