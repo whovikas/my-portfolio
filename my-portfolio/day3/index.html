@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vikas's Portfolio</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #f4f0fa;
+      color: #2c2a29;
+      line-height: 1.8;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #000080, #000080);
+      color: #fff;
+      padding: 48px 16px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      font-style: italic;
+      margin-top: 12px;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+    }
+
+    .nav-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      height: 4px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #000080;
+      padding: 20px;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      border-radius: 10px;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .nav-menu.show {
+      display: flex;
+    }
+
+    .section {
+      padding: 56px 20px;
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-alt {
+      background-color: #e8ddf8;
+    }
+
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 5px solid #6a5acd;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      margin: 0 auto 32px;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.4s ease, box-shadow 0.4s;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+
+    ul {
+      list-style-type: circle;
+      list-style-position: inside;
+      padding-left: 0;
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .footer {
+      background-color: #001080;
+      color: #fff;
+      text-align: center;
+      padding: 24px 12px;
+      font-size: 1rem;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    a {
+      color: #4b0082;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    form input, form textarea, form button {
+      display: block;
+      width: 90%;
+      max-width: 500px;
+      margin: 12px auto;
+      padding: 10px;
+      border: 1px solid #999;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #6a5acd;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #5a4abc;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2.3rem;
+      }
+
+      .profile-pic {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <header class="header">
+      <h1>Vikas's Portfolio</h1>
+      <p class="subtitle">A Tech Enthusiast with Big Dreams</p>
+      <nav>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('show')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-menu">
+          <a href="#about">About</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="section fade-up" id="home">
+      <img src="img1.jpg" alt="Vikas's Profile Photo" class="profile-pic" />
+      <h2>Hello! I'm Vikas </h2>
+      <p>Welcome to my personal space on the internet!</p>
+    </section>
+
+    <section class="section section-alt fade-up" id="about">
+      <h3>About Me</h3>
+      <p><strong>Name:</strong> Vikas </p>
+      <p><strong>Education:</strong> B.Tech in Electronics and Computer Science Engineering</p>
+      <p><strong>Languages:</strong> English, Hindi, Marathi</p>
+    </section>
+
+    <section class="section fade-up" id="achievements">
+      <h3>Achievements</h3>
+      <ul id="achievementList">
+        <li>Loading achievements...</li>
+      </ul>
+    </section>
+
+    <section class="section section-alt fade-up" id="contact">
+      <h3>Contact Me</h3>
+      <p><a href="tel:917385660481">📞 Call Me</a></p>
+      <p><a href="mailto:vkanojiya177@gmail.com">✉️ Email</a></p>
+      <p><a href="https://wa.me/917387492201?text=Hi%2C%20I%20saw%20your%20portfolio%21" target="_blank">💬 Chat on WhatsApp</a></p>
+      <p><a href="https://github.com/whovikas" target="_blank">💻 GitHub</a> | <a href="https://www.linkedin.com/in/vikas-kanojiya-2ab170366?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">🔗 LinkedIn</a></p>
+      <form action="https://formspree.io/f/xovdbgng" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 Vikas | Built with 💖 and HTML5</p>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll(".fade-up");
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      sections.forEach(section => observer.observe(section));
+
+      fetch('data.json')
+        .then(res => res.json())
+        .then(data => {
+          const list = document.getElementById("achievementList");
+          list.innerHTML = "";
+          data.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.title} (${item.year})`;
+            list.appendChild(li);
+          });
+        });
+    });
+  </script>
+</body>
+</html>
