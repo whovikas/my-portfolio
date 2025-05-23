@@ -21,12 +21,15 @@
             classy: ['Merriweather', 'serif'],
           },
           colors: {
-            soft: {
-              bg: '#faf9f6',
-              text: '#2e2e2e',
-              accent: '#3b4c64',
-              muted: '#9ca3af',
-            },
+            chiffon: {
+              bgFrom: '#F9F5F0',
+              bgTo: '#E3E6DB',
+              text: '#2f2f2f',
+              accent: '#6C7A89',
+              muted: '#a8a8a8',
+              button: '#D8CFC4',
+              hover: '#cbc2b8'
+            }
           },
           keyframes: {
             fadeUp: {
@@ -45,10 +48,11 @@
   <style>
     body {
       font-family: 'Merriweather', serif;
+      background: linear-gradient(160deg, #F9F5F0 0%, #E3E6DB 100%);
     }
   </style>
 </head>
-<body class="bg-soft-bg text-soft-text px-6 py-12">
+<body class="text-chiffon-text px-6 py-12">
 
   <!-- Profile Image -->
   <div class="flex justify-center mb-6 opacity-0 animate-fadeUp">
@@ -58,9 +62,9 @@
 
   <!-- Name & Contact -->
   <div class="text-center opacity-0 animate-fadeUp delay-100">
-    <h1 class="text-4xl font-bold text-soft-accent mb-2">Vikas Virendra Kanojiya</h1>
-    <p class="text-base text-soft-muted">📧 123vikas7034@sjcem.edu.in</p>
-    <p class="text-base text-soft-muted mb-4">📞 +91 73874 92201</p>
+    <h1 class="text-4xl font-bold text-chiffon-accent mb-2">Vikas Virendra Kanojiya</h1>
+    <p class="text-base text-chiffon-muted">📧 123vikas7034@sjcem.edu.in</p>
+    <p class="text-base text-chiffon-muted mb-4">📞 +91 73874 92201</p>
   </div>
 
   <!-- Introduction -->
@@ -70,14 +74,14 @@
 
   <!-- Buttons -->
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto mt-10 opacity-0 animate-fadeUp delay-[300ms]">
-    <a href="my-portfolio/day1/" class="btn btn-outline border-gray-300 text-soft-accent hover:bg-gray-100 transition">🌟 Day 1</a>
-    <a href="my-portfolio/day2/" class="btn btn-outline border-gray-300 text-soft-accent hover:bg-gray-100 transition">🚀 Day 2</a>
-    <a href="my-portfolio/day3/" class="btn btn-outline border-gray-300 text-soft-accent hover:bg-gray-100 transition">🎯 Day 3</a>
-    <a href="my-portfolio/day4/" class="btn btn-outline border-gray-300 text-soft-accent hover:bg-gray-100 transition">📘 Day 4</a>
+    <a href="my-portfolio/day1/" class="btn text-chiffon-text bg-chiffon-button hover:bg-chiffon-hover border-none shadow-sm transition">🌟 Day 1</a>
+    <a href="my-portfolio/day2/" class="btn text-chiffon-text bg-chiffon-button hover:bg-chiffon-hover border-none shadow-sm transition">🚀 Day 2</a>
+    <a href="my-portfolio/day3/" class="btn text-chiffon-text bg-chiffon-button hover:bg-chiffon-hover border-none shadow-sm transition">🎯 Day 3</a>
+    <a href="my-portfolio/day4/" class="btn text-chiffon-text bg-chiffon-button hover:bg-chiffon-hover border-none shadow-sm transition">📘 Day 4</a>
   </div>
 
   <!-- Footer -->
-  <footer class="text-center text-sm text-soft-muted mt-16 opacity-0 animate-fadeUp delay-[400ms]">
+  <footer class="text-center text-sm text-chiffon-muted mt-16 opacity-0 animate-fadeUp delay-[400ms]">
     &copy; 2025 Vikas Kanojiya • Built with 💻 TailwindCSS & DaisyUI
   </footer>
 
