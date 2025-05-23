@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vikas Kanojiya | Portfolio</title>
+
+  <!-- TailwindCSS + DaisyUI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" />
+
+  <!-- Custom styles -->
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    .btn-animate:active {
+      transform: scale(0.95);
+      transition: transform 0.1s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-base-200 text-base-content p-6 md:p-10">
+
+  <!-- Container -->
+  <div class="max-w-2xl mx-auto text-center fade-in">
+    
+    <!-- Profile Image -->
+    <img src="img1.jpg" alt="Vikas Kanojiya" class="w-32 h-32 mx-auto rounded-full border-4 border-primary shadow-lg hover:scale-105 transition-transform duration-300" />
+
+    <!-- Name -->
+    <h1 class="text-4xl font-bold mt-4 text-primary">Vikas Virendra Kanojiya</h1>
+    
+    <!-- Contact Info -->
+    <p class="text-lg text-gray-500 mt-2">📧 123vikas7034@sjcem.edu.in</p>
+    <p class="text-lg text-gray-500">📞 +91 73874 92201</p>
+
+    <!-- Introduction -->
+    <p class="text-md mt-4 text-gray-600">
+      Passionate developer and learner, building cool projects with HTML, CSS, JS and modern frameworks.  
+    </p>
+
+    <!-- Button Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+      <a href="./day1/" class="btn btn-primary btn-animate w-full">🌟 Day 1</a>
+      <a href="./day2/" class="btn btn-secondary btn-animate w-full">🚀 Day 2</a>
+      <a href="./day3/" class="btn btn-accent btn-animate w-full">🎯 Day 3</a>
+      <a href="./day4/" class="btn btn-info btn-animate w-full">📘 Day 4</a>
+      <a href="./day5/" class="btn btn-success btn-animate w-full">✅ Day 5</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-10 text-sm text-gray-400">
+      &copy; 2025 Vikas Kanojiya • Built with 💻 TailwindCSS & DaisyUI
+    </footer>
+  </div>
+
+</body>
+</html>
